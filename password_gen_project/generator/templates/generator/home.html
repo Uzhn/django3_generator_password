@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<h1><a href="{% url 'home' %}" class="btn btn-warning">HOME</a></h1>
+<h1><a href="{% url 'about' %}" class="btn btn-warning">Об авторе</a></h1>
+
+<div class="container text-center">
+<h2>Генереатор пароля</h2>
+
+<form action="{% url 'password' %}">
+  <select name="length">
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12" selected="selected"> 12 </option>
+  </select> Длина
+
+  <br>
+  <input type="checkbox", name="uppercase"> верхний регистр
+  <br>
+  <input type="checkbox", name="numbers"> числа
+  <br>
+  <input type="checkbox", name="special"> символы/знаки
+  <br>
+  
+  <input type="submit" value="сгенерировать пароль" class="btn btn-primary">
+</form>
+</div>
